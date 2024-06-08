@@ -25,7 +25,7 @@ def create_friend():
         db.session.add(new_friend)
         db.session.commit()
         
-        return jsonify({"msg": "A friend has been successfully created"}), 201
+        return jsonify(new_friend.to_json()), 201
     except Exception as e:
         db.session.rollback()
         return jsonify({"error": str(e)}), 500
@@ -46,6 +46,25 @@ def get_friend(id):
             return jsonify({"error": "Friend not found"}), 404
         
         return jsonify(friend.to_json()), 200
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({"error": str(e)}), 500
+
+# Delete All Friends    
+@app.route("/api/friends", methods=["DELETE"])
+def delete_all_friends():
+    try:
+        friends = Friend.query.all()
+
+        if not friends:
+            return jsonify({"error": "No friends to delete"}), 404
+
+        for friend in friends:
+            db.session.delete(friend)
+        
+        db.session.commit()
+        return jsonify({"msg": "All friends has been deleted"}), 201
+
     except Exception as e:
         db.session.rollback()
         return jsonify({"error": str(e)}), 500
