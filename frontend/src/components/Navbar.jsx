@@ -27,7 +27,7 @@ const Navbar = ({ setUsers }) => {
             >
               <Flex>
                 <img 
-                  src="../src/assets/python.png" 
+                  src="/python.png" 
                   alt="python logo"
                   width={50}
                   height={50}
@@ -36,7 +36,7 @@ const Navbar = ({ setUsers }) => {
               <Flex display={{base:"none", md:"flex"}} gap={3}>
                 <Text fontSize={"40px"}>+</Text>
                 <img 
-                  src="../src/assets/flask.png" 
+                  src="/flask.png" 
                   alt="flask logo"
                   width={60}
                   height={60}
@@ -45,7 +45,7 @@ const Navbar = ({ setUsers }) => {
               <Flex gap={3}>
                 <Text fontSize={"40px"}>+</Text>
                 <img 
-                  src="../src/assets/javascript.png" 
+                  src="/javascript.png" 
                   alt="javascript logo"
                   width={55}
                   height={55}
@@ -54,7 +54,7 @@ const Navbar = ({ setUsers }) => {
               <Flex display={{base:"none", md:"flex"}} gap={3}>
                 <Text fontSize={"40px"}>+</Text>
                 <img 
-                  src="../src/assets/react.png" 
+                  src="/react.png" 
                   alt="react logo"
                   width={50}
                   height={40}
@@ -63,7 +63,7 @@ const Navbar = ({ setUsers }) => {
               <Flex gap={3}>
                 <Text fontSize={"40px"}>=</Text>
                 <img 
-                  src="../src/assets/explode.png" 
+                  src="/explode.png" 
                   alt="explode head"
                   width={50}
                   height={50}
